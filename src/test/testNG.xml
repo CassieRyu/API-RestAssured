@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Suite">
+    <listeners>
+        <listener class-name="API.RestAssured.report.ExtentTestNGIReporterListener" />
+    </listeners>
+
+    <test name="Test">
+        <packages>
+            <package name="API.TestAssured.testng.specs.*" />
+        </packages>
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="films" />-->
+<!--            </run>-->
+<!--        </groups>-->
+    </test>
+</suite>
