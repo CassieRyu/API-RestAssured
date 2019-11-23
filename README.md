@@ -1,5 +1,8 @@
-# API-RestAssured
-API test example with rest-assured.
+## API TEST Framework
+Combine with rest assured and testNG for simple api tests.
 
-## Run test
-`$ ./gradlew test`
+### Build
+`./gradlew build`
+
+### Test
+`./gradlew clean test`

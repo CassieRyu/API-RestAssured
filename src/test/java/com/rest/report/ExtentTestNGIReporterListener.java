@@ -1,4 +1,4 @@
-package API.RestAssured.report;
+package com.rest.report;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;

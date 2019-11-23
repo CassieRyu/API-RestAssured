@@ -3,12 +3,12 @@
 
 <suite name="Suite">
     <listeners>
-        <listener class-name="API.RestAssured.report.ExtentTestNGIReporterListener" />
+        <listener class-name="com.rest.report.ExtentTestNGIReporterListener" />
     </listeners>
 
     <test name="Test">
         <packages>
-            <package name="API.TestAssured.testng.specs.*" />
+            <package name="com.rest.assured.specs.*" />
         </packages>
 <!--        <groups>-->
 <!--            <run>-->

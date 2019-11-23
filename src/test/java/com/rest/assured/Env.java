@@ -1,4 +1,4 @@
-package API.RestAssured.testng;
+package com.rest.assured;
 
 import com.google.common.collect.ImmutableMap;
 

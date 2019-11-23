@@ -1,7 +1,7 @@
-package API.RestAssured.testng.specs;
+package com.rest.assured.specs;
 
-import API.RestAssured.testng.Env;
-import API.RestAssured.testng.Helper;
+import com.rest.assured.Env;
+import com.rest.assured.Helper;
 import io.restassured.RestAssured;
 import io.restassured.response.*;
 import org.testng.annotations.*;
@@ -15,8 +15,8 @@ public class FilmsTest {
     @BeforeClass
     public void setup() {
 
-       // RestAssured.baseURI = Env.getBaseURL();
-        RestAssured.baseURI = "https://ghibliapi.herokuapp.com";
+        RestAssured.baseURI = Env.getBaseURL();
+//        RestAssured.baseURI = "https://ghibliapi.herokuapp.com";
         RestAssured.basePath = "/films";
     }
 

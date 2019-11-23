@@ -3,15 +3,13 @@
  *
  * This generated file contains a sample Java Library project to get you started.
  * For more details take a look at the Java Libraries chapter in the Gradle
- * User Manual available at https://docs.gradle.org/6.0/userguide/java_library_plugin.html
+ * User Manual available at https://docs.gradle.org/6.0.1/userguide/java_library_plugin.html
  */
 
 plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
-    id 'idea'
 }
-apply plugin: 'java' // adds 'test' task
 
 repositories {
     // Use jcenter for resolving dependencies.
@@ -25,7 +23,6 @@ dependencies {
 
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation 'com.google.guava:guava:28.0-jre'
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.10.1'
 
     // Use TestNG framework, also requires calling test.useTestNG() below
     testImplementation 'org.testng:testng:6.14.3'
@@ -38,18 +35,10 @@ dependencies {
 test {
     // Use TestNG for unit tests
     useTestNG() {
-     //   systemProperty "env", System.getProperty("env")
+        systemProperty "env", System.getProperty("env")
 
         options.suites('./src/test/testNG.xml')
     }
+    //Show standard output in console
     testLogging.showStandardStreams = true
 }
-
-idea {
-    module {
-        outputDir = file("$buildDir/classes/main")
-        testOutputDir = file("$buildDir/classes/test")
-        jdkName = "1.8"
-    }
-}
-
