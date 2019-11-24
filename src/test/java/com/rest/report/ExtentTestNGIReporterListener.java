@@ -28,9 +28,7 @@ public class ExtentTestNGIReporterListener implements IReporter{
     private ExtentReports extent;
 
     @Override
-    public void generateReport(
-            List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory
-    ) {
+    public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
         init();
         for (Object suite : suites) {
             Map result = ((ISuite) suite).getResults();
