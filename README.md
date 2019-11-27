@@ -2,15 +2,16 @@
 Combine with rest assured and testNG for simple api tests.
 
 ### Feature
-1. Support multi environments
-2. Report
-3. Suite
+1. Data provider
+2. Support multi environments
+3. Report
+4. Suite
 
 ### Build
 `./gradlew build`
 
 ### Test
-* default env: prod
+* default env - prod: 
 `./gradlew clean test`
-* local env
+* local env: 
 `./gradlew clean test -Denv=local`
