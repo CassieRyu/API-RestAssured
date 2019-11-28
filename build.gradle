@@ -9,6 +9,7 @@
 plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
+    id 'idea'
 }
 
 repositories {
@@ -41,4 +42,12 @@ test {
     }
     //Show standard output in console
     testLogging.showStandardStreams = true
+}
+
+idea {
+    module {
+        outputDir = file("$buildDir/classes/main")
+        testOutputDir = file("$buildDir/classes/test")
+        jdkName = "1.8"
+    }
 }

@@ -1,6 +1,4 @@
-FROM openjdk:8-jdk-alpine
-RUN mkdir projects
-COPY . /projects
-WORKDIR /projects/API-RestAssured
-RUN ./gradlew build
-CMD ["./gradlew", "test"]
+FROM gradle:jdk8
+RUN mkdir /API-RestAssured
+COPY build.gradle /API-RestAssured
+WORKDIR /API-RestAssured
