@@ -1,4 +1,4 @@
-package com.rest.assured;
+package com.rest.assured.configuration;
 
 import com.google.common.collect.ImmutableMap;
 

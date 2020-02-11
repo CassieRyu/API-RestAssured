@@ -1,7 +1,9 @@
 package com.rest.assured.specs;
 
-import com.rest.assured.Constants;
-import com.rest.assured.Env;
+import static com.rest.assured.configuration.envSpecification.setAdminRole;
+
+import com.rest.assured.configuration.Constants;
+import com.rest.assured.configuration.Env;
 import com.rest.assured.Helper;
 import com.rest.assured.TestData;
 import io.restassured.RestAssured;
@@ -34,6 +36,7 @@ public class FilmsTest {
 
     @Test(groups = "films", description = "Assert if more than five high score films returned.")
     public void films_contain_high_score_items() {
+        setAdminRole();
         Response response = Helper.doGetRequest("");
         List<String> scores = response.jsonPath().getList("rt_score");
         List<String> highScores = scores.stream().filter(score -> Integer.parseInt(score) >= Constants.HIGH_SCORE_LIEN).collect(Collectors.toList());
