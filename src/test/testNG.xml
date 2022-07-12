@@ -3,7 +3,7 @@
 
 <suite name="Suite">
     <listeners>
-        <listener class-name="com.rest.report.ExtentTestNGIReporterListener" />
+        <listener class-name="com.rest.report.ExtentReporterNG" />
     </listeners>
 
     <test name="Test">

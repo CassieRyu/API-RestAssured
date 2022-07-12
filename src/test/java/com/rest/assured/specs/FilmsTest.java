@@ -34,15 +34,15 @@ public class FilmsTest {
         Assert.assertEquals(title, filmTitle);
     }
 
-    @Test(groups = "films", description = "Assert if more than five high score films returned.")
+    @Test(groups = "films", description = "Assert if more than three high score films returned.")
     public void films_contain_high_score_items() {
-        setAdminRole();
+//        setAdminRole();
         Response response = Helper.doGetRequest("");
         List<String> scores = response.jsonPath().getList("rt_score");
-        List<String> highScores = scores.stream().filter(score -> Integer.parseInt(score) >= Constants.HIGH_SCORE_LIEN).collect(Collectors.toList());
+        List<String> highScores = scores.stream().filter(score -> Integer.parseInt(score) >= Constants.HIGH_SCORE_LINE).collect(Collectors.toList());
 
-        Reporter.log("Return more than five high score films.");
+        Reporter.log("Return more than three high score films.");
 
-        Assert.assertTrue(highScores.size() > 5, "High score films not more than 5");
+        Assert.assertTrue(highScores.size() > 3, "High score films not more than 5");
     }
 }

@@ -16,6 +16,8 @@ repositories {
     // Use jcenter for resolving dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
+    mavenCentral()
+    google()
 }
 
 dependencies {
@@ -23,14 +25,16 @@ dependencies {
     api 'org.apache.commons:commons-math3:3.6.1'
 
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
-    implementation 'com.google.guava:guava:28.0-jre'
+    implementation 'com.google.guava:guava:31.1-jre'
 
     // Use TestNG framework, also requires calling test.useTestNG() below
-    testImplementation 'org.testng:testng:6.14.3'
+    testImplementation 'org.testng:testng:7.6.0'
     //   testImplementation 'io.rest-assured:json-path:4.1.2'
-    testImplementation 'io.rest-assured:rest-assured:4.1.2'
+    testImplementation 'io.rest-assured:rest-assured:5.1.1'
     //  testImplementation 'org.hamcrest:hamcrest-library:2.1'
-    implementation 'com.aventstack:extentreports:3.1.5'
+    implementation 'com.aventstack:extentreports:5.0.9'
+    // https://mvnrepository.com/artifact/com.relevantcodes/extentreports
+    implementation 'com.relevantcodes:extentreports:2.41.2'
 }
 
 test {
@@ -48,6 +52,8 @@ idea {
     module {
         outputDir = file("$buildDir/classes/main")
         testOutputDir = file("$buildDir/classes/test")
-        jdkName = "1.8"
+//        jdkName = "11"
+        sourceCompatibility = 11
+        targetCompatibility = 11
     }
 }
